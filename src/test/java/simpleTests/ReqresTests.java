@@ -2,12 +2,13 @@ package simpleTests;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
+import testsWithModelsAndLombok.TestBase;
 
 import static filters.CustomLogFilter.customLogFilter;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
-public class ReqresTests {
+public class ReqresTests extends TestBase {
     String registrURL = "https://reqres.in/api/register",
             singleUserURL = "https://reqres.in/api/users/2",
             singleUserNotFoundURL = "https://reqres.in/api/users/23";

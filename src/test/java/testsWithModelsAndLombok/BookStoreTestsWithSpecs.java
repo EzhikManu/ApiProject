@@ -2,12 +2,12 @@ package testsWithModelsAndLombok;
 
 import org.junit.jupiter.api.Test;
 
-import static Specs.BookStoreSpec.request;
-import static Specs.BookStoreSpec.responseSpec;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static testsWithModelsAndLombok.Specs.BookStoreSpec.request;
+import static testsWithModelsAndLombok.Specs.BookStoreSpec.responseSpec;
 
-public class BookStoreTestsWithSpecs {
+public class BookStoreTestsWithSpecs extends TestBase {
     String requestURL = "https://demoqa.com/Account/v1/GenerateToken";
 
     @Test

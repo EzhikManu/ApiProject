@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static testsWithModelsAndLombok.Specs.ReqresSpec.reqresRequest;
 
-public class ReqresTestsWithLombok {
+public class ReqresTestsWithLombok extends TestBase {
     String registrURL = "https://reqres.in/api/register",
             singleUserURL = "https://reqres.in/api/users/2",
             listResourceURL = "https://reqres.in/api/unknown",
@@ -70,7 +70,7 @@ public class ReqresTestsWithLombok {
     @Test
     @DisplayName("singleUser test with lombok model")
     void singleUser() {
-        SingleUserResponse userData =
+        SingleUserRespData data =
                 given()
                         .spec(reqresRequest)
                         .when()
@@ -78,12 +78,12 @@ public class ReqresTestsWithLombok {
                         .then()
                         .statusCode(200)
                         .log().all()
-                        .extract().as(SingleUserResponse.class);
-        assertThat(userData.first_name).isEqualTo("Janet");
-        assertThat(userData.last_name).isEqualTo("Weaver");
-        assertThat(userData.id).isEqualTo(2);
-        assertThat(userData.email).isEqualTo("janet.weaver@reqres.in");
-
+                        .extract().as(SingleUserRespData.class);
+                System.out.println(data.getData().getId());
+        assertThat(data.getData().getId()).isEqualTo(2);
+        assertThat(data.getData().getFirst_name()).isEqualTo("Janet");
+        assertThat(data.getData().getLast_name()).isEqualTo("Weaver");
+        assertThat(data.getData().getEmail()).isEqualTo("janet.weaver@reqres.in");
     }
 
     @Test

@@ -3,6 +3,7 @@ package simpleTests;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
+import testsWithModelsAndLombok.TestBase;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -12,7 +13,7 @@ import static filters.CustomLogFilter.customLogFilter;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 
-public class DemoWebShopTest {
+public class DemoWebShopTest extends TestBase {
     String logoLinkAddress = "http://demowebshop.tricentis.com/Themes/DefaultClean/Content/images/logo.png",
             email = "ole@ole.com",
             password = "oleole",
@@ -21,7 +22,6 @@ public class DemoWebShopTest {
 
     @Test
     void checkButtonLogOut() {
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         step("get cookie by api and set to browser", () -> {
             String authCookie =

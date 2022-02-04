@@ -1,6 +1,7 @@
 package testsWithModelsAndLombok.lombok;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 /*
 {
@@ -21,8 +22,10 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SingleUserResponse {
-    public int id;
-    public String email;
-    public String first_name;
-    public String last_name;
+    private int id;
+    private String email;
+    @JsonProperty("first_name")
+    private String first_name;
+    @JsonProperty("last_name")
+    private String last_name;
 }
