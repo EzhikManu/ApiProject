@@ -25,7 +25,7 @@ gradle clean test
 ## [Allure Report](https://jenkins.autotests.cloud/job/08-iljasstan-ApiDiploma/7/allure/#)
 <img src="https://github.com/EzhikManu/ApiProject/blob/master/images/screenshots/allureReport.png" width="800" height="500">
 
-## The project integrated with [Allure TestOPS](https://allure.autotests.cloud/project/893/dashboards)
+## The project integrated with Allure TestOPS
 <img src="https://github.com/EzhikManu/ApiProject/blob/master/images/screenshots/allureTestops.png" width="800" height="500">
 
 ## Test report notifications go to telegram
