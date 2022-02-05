@@ -22,36 +22,6 @@ public class BookStoreTests extends TestBase {
         return data;
     }
 
-//    @Test
-//    void generateTokenTest() {
-//        given()
-//                .filter(new AllureRestAssured())
-//                .contentType("application/json")
-//                .body(generateData())
-//                .when()
-//                .post(requestURL)
-//                .then()
-//                .log().ifError()
-//                .statusCode(200)
-//                .body("status", is("Success"))
-//                .body("token", is(notNullValue()));
-//    }
-//    @Test
-//    void generateTokenWithSchema() {
-//        given()
-//                .filter(new AllureRestAssured())
-//                .contentType("application/json")
-//                .body(generateData())
-//                .when()
-//                .post(requestURL)
-//                .then()
-//                .log().ifError()
-//                .log().all()
-//                .statusCode(200)
-//                .body(matchesJsonSchemaInClasspath("schemas/generateTokenSchema.json"))
-//                .body("status", is("Success"))
-//                .body("token", is(notNullValue()));
-//    }
     @Test
     void generateTokenWithSchemaAndPrettyAllure() {
         given()
