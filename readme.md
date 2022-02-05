@@ -2,8 +2,10 @@
 ## The following services were used in this project:
 + [reqres.in](https://reqres.in) <br>
 <img src="https://github.com/EzhikManu/ApiProject/blob/master/images/screenshots/reqresIndex.png" width="500" height="500">
+
 + [demowebshop.com](http://demowebshop.tricentis.com) <br>
 <img src="https://github.com/EzhikManu/ApiProject/blob/master/images/screenshots/demowebshopIndex.png" width="500" height="500">
+
 + [book store on demoqa.com](https://demoqa.com/books) <br>
 <img src="https://github.com/EzhikManu/ApiProject/blob/master/images/screenshots/bookStore.png" width="500" height="500">
 
